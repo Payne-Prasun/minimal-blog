@@ -1,53 +1,72 @@
+
 body{
+    overflow: hidden;
     font-family: "Roboto Condensed", sans-serif;
     display: inline-flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     float: right;
     min-height: 100vh;
-
     /* background-color: black; */
     background-image: url("background_black2.png");
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
 }
+.logo{
+    position: absolute;
+    left: 100px;
+    top:100px
+    /* margin-right: 350px; */
+    /* margin-left: 10px; */
+}
 
 .logo img{
     display: flex;
-    position: relative;
-    right: 570px;
-    bottom: 190px;    
-    height: 240px;
-    width: 370px;
+    /* position: relative;
+    right: 75%;
+    bottom: 20vh;    */
+    height: 25vh;
+    width: 70%;
 }
 
 .logo .tag{
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     display: flex;
     position: relative;
-    bottom: 220px;
-    right: 530px;
+    width: 450px;
+    margin-left: 25px;
+    /* bottom: 450px; */
+    /* right: 71%; */
 }
 
 
 .logo .para{
-    bottom:150px;
+    /* bottom:150px; */
     position: relative;
     display: flex;
     color: white;
     font-size: 20px;
-    right: 530px;
+    right: -24px;
+    width: 450px;
 }
 
 
 .login_block{
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6;
     padding: 15px;
     height: 500px;
     width: 500px;
     margin-right: 70px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px gray; */
+    margin-top: 100px;
+    background-color: #e6e6e6;
+    padding: 15px;
+    height: 450px;
+    width: 400px;
+    margin-right: 10%;
     border-radius: 15px;
     box-shadow: 3px 3px 8px gray;
 }
@@ -69,13 +88,21 @@ body{
     margin: 10px 22px;
 }
 .username input{
-    /* position: relative; */
+    position: relative;
     /* padding-left: 1; */
     /* left: 22px; */
-    font-size: 15px;
+    /* font-size: 15px;
     height: 30px;
     padding: 10px;
     width: 400px;
+    border: solid 1px;
+    border-color: black;
+    border-radius: 5px;
+    transition: ease-in 0.2s; */
+    font-size: 15px;
+    height: 30px;
+    padding: 10px;
+    width: 323px;
     border: solid 1px;
     border-color: black;
     border-radius: 5px;
@@ -98,9 +125,16 @@ body{
     position: relative;
     /* top:15px; */
     /* left: 22px; */
-    padding: 10px;
+    /* padding: 10px;
     height: 30px;
     width: 400px;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color:black;
+    transition: ease-in 0.3s; */
+    padding: 10px;
+    height: 30px;
+    width: 323px;
     border: solid 1px;
     border-radius: 5px;
     border-color:black;
@@ -111,7 +145,6 @@ body{
     outline:none;
     border-color: green;
 }
-
 
 
 .button .login{
@@ -201,10 +234,999 @@ body{
 }
 
 .quote{
-    position: relative;
-    margin-top: 100px;
+    /* position: relative; */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 1160px) {
+    .logo{
+        margin-left: -5%;
+        margin-top: 5%;
+        /* margin-right: 350px; */
+        margin-right: 150px;
+    } 
+    
+    .logo img{
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 150px;
+        width: 270px;
+    }
+    
+    .logo .tag{
+        font-size: 25px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 450px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 20px;
+        /* margin-left: 25px; */
+        /* right: 370px; */
+        width: 450px;
+    }
+
+    .sign_up_block{
+        margin-top: 100px;
+        background-color: #e6e6e6;
+        padding: 15px;
+        height: 350px;
+        width: 350px;
+        margin-right: 35%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h4{
+        font-size: 14px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 15px;
+        padding: 10px;
+        width: 285px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 15px;
+        width: 285px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 40px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        /* color: white; */
+        position: relative;
+        bottom:-50px;
+        font-size: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1060px) {
+    .logo{
+        margin-left: -5%;
+        margin-top: 5%;
+        /* margin-right: 350px; */
+        margin-right: 90px;
+    } 
+    
+    .logo img{
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 150px;
+        width: 300px;
+    }
+    
+    .logo .tag{
+        font-size: 25px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 450px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 20px;
+        margin-left: 2px;
+        /* right: 370px; */
+        width: 450px;
+    }
+
+    .sign_up_block{
+        margin-top: 100px;
+        background-color: #e6e6e6;
+        padding: 15px;
+        height: 350px;
+        width: 350px;
+        margin-right: 45%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h4{
+        font-size: 14px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 15px;
+        padding: 10px;
+        width: 285px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 15px;
+        width: 285px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 40px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        font-size: 12px;
+        position: relative;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 990px) {
+    .logo{
+        margin-left: -8%;
+        margin-top: 5%;
+        /* margin-right: 350px; */
+        margin-right: 50px;
+    } 
+    
+    .logo img{
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 150px;
+        width: 270px;
+    }
+    
+    .logo .tag{
+        font-size: 25px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 450px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 20px;
+        margin-left: 2px;
+        /* right: 370px; */
+        width: 450px;
+    }
+
+    .sign_up_block{
+        margin-top: 100px;
+        background-color: #e6e6e6;
+        padding: 15px;
+        height: 300px;
+        width: 300px;
+        margin-right: 60%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h2{
+        font-size: 20px;
+        /* font-weight: 200; */
+        position: relative;
+        /* margin-top: -20px;
+        margin-right: 30px; */
+    }
+
+    .sign_up_block h4{
+        top: 5px;
+        font-size: 12px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 10px;
+        padding: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 30px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        font-size: 10px;
+        position: relative;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo{
+        display: none;
+        margin-left: -10%;
+        margin-top: 5%;
+        /* margin-right: 350px; */
+        margin-right: 20px;
+    } 
+    
+    .logo img{
+        left: 40px;
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 125px;
+        width: 250px;
+    }
+    
+    .logo .tag{
+        font-size: 20px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 400px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 9px;
+        margin-left: 25px;
+        /* right: 370px; */
+        width: 400px;
+    }
+
+    .sign_up_block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        background-color: #e6e6e6;
+        padding: 15px;
+        height: 300px;
+        width: 300px;
+        margin-right: 70%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h2{
+        font-size: 20px;
+        /* font-weight: 200; */
+        position: relative;
+        /* margin-top: -20px;
+        margin-right: 30px; */
+    }
+
+    .sign_up_block h4{
+        top: 5px;
+        font-size: 12px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 10px;
+        padding: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 30px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        font-size: 10px;
+        position: relative;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 820px) {
+    .logo{
+        margin-left: 70%;
+        margin-top: 16%;
+        /* margin-right: 350px; */
+        /* margin-right: 20px; */
+    } 
+    
+    .logo img{
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 105px;
+        width: 205px;
+    }
+    
+    .logo .tag{
+        font-size: 20px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 400px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 9px;
+        margin-left: 25px;
+        /* right: 370px; */
+        width: 400px;
+    }
+
+    .sign_up_block{
+        margin-top: 100px;
+        background-color: #e6e6e6;
+        padding: 15px;
+        height: 280px;
+        width: 280px;
+        margin-right: 75%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h2{
+        font-size: 20px;
+        /* font-weight: 200; */
+        position: relative;
+        /* margin-top: -20px;
+        margin-right: 30px; */
+    }
+
+    .sign_up_block h4{
+        /* top: 5px; */
+        font-size: 12px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 10px;
+        padding: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 30px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        font-size: 9px;
+        position: relative;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 770px) {
+    .logo{
+        display: none;
+        margin-left: 70%;
+        margin-top: 16%;
+        /* margin-right: 350px; */
+        /* margin-right: 20px; */
+    } 
+    
+    .logo img{
+        display: flex;
+        /* position: relative; */
+        /* top: 30%; */
+        /* right: 390px; */
+        /* bottom: 100px;     */
+        height: 105px;
+        width: 205px;
+    }
+    
+    .logo .tag{
+        font-size: 20px;
+        color: white;
+        display: flex;
+        position: relative;
+        width: 400px;
+        margin-left: 25px;
+        /* bottom: 130px; */
+    }
+    
+    .logo .para{
+        /* bottom: 100px; */
+        position: relative;
+        display: flex;
+        color: white;
+        font-size: 9px;
+        margin-left: 25px;
+        /* right: 370px; */
+        width: 400px;
+    }
+
+    .sign_up_block{
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 100px; */
+        background-color: #e6e6e6;
+        /* padding: 15px; */
+        height: 280px;
+        width: 280px;
+        /* margin-right: 75%; */
+        border-radius: 15px;
+        box-shadow: 3px 3px 8px gray;
+    }
+
+    .sign_up_block h2{
+        font-size: 20px;
+        /* font-weight: 200; */
+        position: relative;
+        /* margin-top: -20px;
+        margin-right: 30px; */
+    }
+
+    .sign_up_block h4{
+        /* top: 5px; */
+        font-size: 12px;
+        font-weight: 200;
+        position: relative;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+    .username{
+        margin: 10px 22px;
+    }
+    .username input{
+        position: relative;
+        /* padding-left: 1; */
+        /* left: 22px; */
+        font-size: 15px;
+        height: 10px;
+        padding: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 5px;
+        transition: ease-in 0.2s;
+    }
+    
+    .username input:focus{
+        /* border: solid 0.2px; */
+        /* border-color:dodgerblue ; */
+        outline:none;
+        border-color: dodgerblue ;
+    }
+    
+    
+    .password{
+        margin: 15px 22px;
+    }
+    .password input{
+        font-size: 15px;
+        position: relative;
+        /* top:15px; */
+        /* left: 22px; */
+        padding: 10px;
+        height: 10px;
+        width: 235px;
+        border: solid 1px;
+        border-radius: 5px;
+        border-color:black;
+        transition: ease-in 0.3s;
+    }
+    
+    .password input:focus{
+        outline:none;
+        border-color: green;
+    }
+    
+    .button .Join{
+        width: 100px;
+        height: 30px;
+        border: 1px solid;
+        border-color: white;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .button{
+        /* padding-right: 100px; */
+        /* margin: 40px 150px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .button .Join{
+        /* margin-left: 20px; */
+        /* justify-content: center;
+        align-items: center; */
+        transition-timing-function: ease-in-out ;
+    }
+    
+    .button .Join:hover{
+        transition: ease-in 0.2s;
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+    
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+        
+    .button .Join:not(:hover){
+        transition: ease-in 0.2s;
+    }
+    
+    .quote{
+        font-size: 9px;
+        position: relative;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
 
