@@ -1,0 +1,2 @@
+background-image: linear-gradient(to left top, #a1b0ff, #91a2ff, #8194ff, #7085ff, #5f77ff, #556ef7, #4b64f0, #405be8, #3c56d7, #3950c6, #364ab5, #3345a4);
+
