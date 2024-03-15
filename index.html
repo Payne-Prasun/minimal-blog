@@ -3,9 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="logo">
+        <img src="Site_logo.png">
+        <span class="tag">Where simplicity meets Expression</span>
+        <span class="para">Dive into a world of simplicity, where every word counts, and every post resonates.
+            <br>
+        Discover the essence of minimalism, distilled into captivating stories, thought-provoking ideas, 
+        <br>
+        and moments of quiet inspiration. Join us on a journey where less trulybecomes more.</span>
+        </div>
+    <div class="login_block">
+        <div class="heading">
+            <h2>Login</h2>
+            <h4>Welcome back, Please login to continue writing</h4>
+        </div>
+        <div class="username">
+            <input type="text" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="password">
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <div class="remember_me">
+            <label><input type="checkbox"> <span style="position: relative ;font-size: 15px;">Remember Me?</span> </label>
+            <a href="#" style="text-decoration: none; cursor: pointer;"> Forgot Password?</a>
+        </div>
+
+        <div class="button">
+            <button class="login" id="login">Login</button>
+            <a href="sign_up.html">
+            <button class="Signup" id="signup">Signup</button>
+        </a>
+        </div>
+
+        <div class="quote">
+            "Fill your paper with the breathings of your heart." - William Wordsworth
+        </div>
+        
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDLXczeErI6xod4yv7ISCLggkgKEf8K69I",
+          authDomain: "blog-database-bf3a1.firebaseapp.com",
+          databaseURL: "https://blog-database-bf3a1-default-rtdb.firebaseio.com",
+          projectId: "blog-database-bf3a1",
+          storageBucket: "blog-database-bf3a1.appspot.com",
+          messagingSenderId: "445008082576",
+          appId: "1:445008082576:web:90549e6702e81bd50bca15",
+          measurementId: "G-9GQNWRHMN2"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+      
+        // join.addEventListener('click',(e) => {
+    
+        //     var email = document.getElementById('Email').value;
+        //     var password = document.getElementById('Password').value;
+        //     // var password_confirm = document.getElementById('Password_Confirm').value;
+    
+        //     createUserWithEmailAndPassword(auth, email, password)
+        //     .then((userCredential) => {
+        //         // Signed up 
+        //         const user = userCredential.user;
+                
+        //         set(ref(database, 'users/' + user.uid), {
+        //             email: email
+        //         })
+    
+        //         alert('Account Created');
+    
+        //         //to redirect to another page add code here
+    
+                
+        //     })
+        //     .catch((error) => {
+        //         const errorCode = error.code;
+        //         const errorMessage = error.message;
+        //         //..
+        //         alert(errorMessage);
+        //     });
+    
+        // })
+
+        login.addEventListener('click',(e)=>{
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+    
+        const user = userCredential.user;
+        const dt = new Date();
+
+        update(ref(database, 'users/' + user.uid), {
+                    last_login: dt,
+                })
+            
+                alert("User Logged in!");
+    
+        })
+        .catch((error) => {
+        const errorMessage = error.message;
+        const errorCode = error.code;
+        alert(errorMessage);
+
+        });
+
+        });
+
+
+    
+
+
+    
+    </script>
+
+    
 </body>
 </html>
