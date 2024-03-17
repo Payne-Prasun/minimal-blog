@@ -1,0 +1,109 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap') */
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    background-image: url("background_black2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.title .blog_title{
+    /* background-color: black; */
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /* color: wheat; */
+    font-size: 15px;
+    font-style: italic;
+    padding: 10px;
+    position: absolute;
+    top:10%;
+    width: 60%;
+    height: 30px;
+    border-radius: 13px;
+    outline: none;
+    border: solid 0.6px;
+}
+
+.title input:focus{
+    border-color: green;
+}
+
+.title input:focus + .label,
+.title input:valid + .label{
+    color: #E0E1DD;
+    background-color: green;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-410px,-29px) scale(0.70);
+    z-index: 1111;
+    /* content: "Blog Name"; */
+}
+
+.blog_title::placeholder{
+    padding: 2px;
+    font-style: italic;
+}
+
+.title .label{
+    transition: 0.6s ease;
+    position: absolute;
+    top:12%;
+    /* background-color: red; */
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 25px;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text .blog_text{
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 10px;
+    resize: none; 
+    position: absolute;
+    top:20%;
+    border-radius: 13px;
+    width: 60%;
+    height: 500px;
+    outline: none;
+    border: none;
+}
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn .button{
+    position: absolute;
+    top:91%;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: green;
+    border: solid 0.5px;
+}
+
+
+
